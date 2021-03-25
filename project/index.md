@@ -4,6 +4,9 @@
 [![Status](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 Status: final, Type: Project
 
+:o2: figure caltions come underneath the figure
+
+:oe: due to markdown limitations refernce section must be last
 
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/project.md)
 
