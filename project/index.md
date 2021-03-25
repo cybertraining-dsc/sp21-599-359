@@ -4,6 +4,8 @@
 [![Status](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 Status: planing, Type: Project
 
+:o2: demonstrate git ppull
+
 :o2: figure caltions come underneath the figure
 
 :o2: due to markdown limitations refernce section must be last
