@@ -29,26 +29,26 @@ Please note that an up to date version of these instructions is available at
 
 *De novo molecular design* 
 
-Deep learning (DL) is finding new uses in developing novel chemical structures. Methods that employ variational autoencoders (VAE) have been used to generate new chemical structures by 1) encoding input string molecule structures, 2) reparametrizing the underlying latent variables and then 3) searching for viable solutions in the latent space, by using methods such as Bayesian optimizations. A final step involves decoding the results back into simplified molecular-input line-entry system (SMILES) notation, for recovery of molecular descriptors. Variations to this involve using generative adversarial networks (GAN), as subnetworks in the architecture, to generate the new chemical structures [^8].   
+Deep learning (DL) is finding new uses in developing novel chemical structures. Methods that employ variational autoencoders (VAE) have been used to generate new chemical structures by 1) encoding input string molecule structures, 2) reparametrizing the underlying latent variables and then 3) searching for viable solutions in the latent space, by using methods such as Bayesian optimizations. A final step involves decoding the results back into simplified molecular-input line-entry system (SMILES) notation, for recovery of molecular descriptors. Variations to this involve using generative adversarial networks (GAN), as subnetworks in the architecture, to generate the new chemical structures [^8].
 
-Other methods for developing new chemical structures include use of recurrent neural networks (RNN) to generate new valid SMILES strings, after training the RNNs on large quantities of known SMILES datasets. The RNNs use probability distributions learned from training sets, to generate new strings that correspond to new molecular structures [^13]. Variations to this approach incorporate reinforcement learning to reward models for new chemical structures, while punishing them for undesirable results [^16]. 
+Other methods for developing new chemical structures include use of recurrent neural networks (RNN) to generate new valid SMILES strings, after training the RNNs on large quantities of known SMILES datasets. The RNNs use probability distributions learned from training sets, to generate new strings that correspond to new molecular structures [^13]. Variations to this approach incorporate reinforcement learning to reward models for new chemical structures, while punishing them for undesirable results [^16].
 
 *Bioactivity prediction* 
 
-Computational methods have been used in drug development for decades [^7]. The emergence of high-throughput screening (HTS), in which automated equipment is used to conduct large assays of scientific experiments on molecular compounds in parallel, has resulted in generation of enormous amounts of data that require processing.  Quantitative structure activity relationship (QSAR) models for predicting the biological activity responses to physiochemical properties of predictor chemicals, regularly use machine learning models like support vector machines (SVM) and random decision forests (RF) for this processing [^8], [^5].  
+Computational methods have been used in drug development for decades [^7]. The emergence of high-throughput screening (HTS), in which automated equipment is used to conduct large assays of scientific experiments on molecular compounds in parallel, has resulted in generation of enormous amounts of data that require processing.  Quantitative structure activity relationship (QSAR) models for predicting the biological activity responses to physiochemical properties of predictor chemicals, regularly use machine learning models like support vector machines (SVM) and random decision forests (RF) for this processing [^8], [^5].
 
-While deep learning (DL) approaches have an advantage over single-layer machine learning methods, when predicting biological activity responses to properties of predictor chemicals, they have only recently been used for this [^8]. The need to interpret how predictions are made through computationally-oriented drug discovery, is seen - in part - as a factor to why DL approaches have not been adopted as quickly in this area [^6]. However, because DL models can learn complex non-linear data patterns, using their multiple hidden layers to capture patterns in data, they are better suited for processing complex life sciences data than other machine learning approaches [^6].  
+While deep learning (DL) approaches have an advantage over single-layer machine learning methods, when predicting biological activity responses to properties of predictor chemicals, they have only recently been used for this [^8]. The need to interpret how predictions are made through computationally-oriented drug discovery, is seen - in part - as a factor to why DL approaches have not been adopted as quickly in this area [^6]. However, because DL models can learn complex non-linear data patterns, using their multiple hidden layers to capture patterns in data, they are better suited for processing complex life sciences data than other machine learning approaches [^6].
 
 Their applications have included profiling tumors at molecular level, and predicting drug response based on pharmacological and biological molecular structures, functions and dynamics. This is attributed to their ability to handle high dimensionality in data features, making them appealing for use in predicting drug response [^5]. 
 
-For example, DL models were found to perform better than standard RF models [^1] in predicting the biological activities of molecular compounds, using datasets from the Merck Molecular Activity Challenge on Kaggle [^11]. Deep neural networks were also used in models that won NIH’s Toxi21 Challenge [^2] on using chemical structure data only  to predict compounds of concern to human health [^3].  
+For example, DL models were found to perform better than standard RF models [^1] in predicting the biological activities of molecular compounds, using datasets from the Merck Molecular Activity Challenge on Kaggle [^11]. Deep neural networks were also used in models that won NIH’s Toxi21 Challenge [^2] on using chemical structure data only  to predict compounds of concern to human health [^3].
  
 
 ## 2. Related Work
 
 ### 2.1. Merck Molecular Activity Challenge on Kaggle
 
-A challenge to identify the best statistical techniques for predicting molecular activity was issued by Merck & Co Pharmaceutical, through Kaggle in October of 2012.   The stated goal of the challenge was to ‘help develop safe and effective medicines by predicting molecular activity’ for effects that were both on and off target[^11]. 
+A challenge to identify the best statistical techniques for predicting molecular activity was issued by Merck & Co Pharmaceutical, through Kaggle in October of 2012.   The stated goal of the challenge was to ‘help develop safe and effective medicines by predicting molecular activity’ for effects that were both on and off target[^11].
 
 ### 2.2. The Dataset
 
@@ -68,9 +68,9 @@ The test dataset files were similar (Figure 2) to the training files, except the
 
 ### 2.2. A Deep Learning Algorithm
 
-The entry that won the Merck Molecular Activity Challenge on Kaggle used an ensemble of methods that included a fully connected neural network as the main contributor to the high accuracy in predicting molecular activity[^1]. Evaluations of predictions for molecular activity for the test set assays were then determined using the mean of the correlation coefficient (R2) of the 15 data sets. Sample code in R was provided for evaluating the correlation coefficient. The code, and formula for R2 are appended in Appendix 1.   
+The entry that won the Merck Molecular Activity Challenge on Kaggle used an ensemble of methods that included a fully connected neural network as the main contributor to the high accuracy in predicting molecular activity[^1]. Evaluations of predictions for molecular activity for the test set assays were then determined using the mean of the correlation coefficient (R2) of the 15 data sets. Sample code in R was provided for evaluating the correlation coefficient. The code, and formula for R2 are appended in Appendix 1.
 
-The approach of employing convolutional networks on substructures of molecules, as a way to concentrate learning on localized features, while reducing the number of parameters in the overall network, holds promise in improving the molecular activity predictions. This methodology of identifying molecular substructures as graph convolutions, prior to further processing, is proposed by a number of authors [^12], [^15].    
+The approach of employing convolutional networks on substructures of molecules, as a way to concentrate learning on localized features, while reducing the number of parameters in the overall network, holds promise in improving the molecular activity predictions. This methodology of identifying molecular substructures as graph convolutions, prior to further processing, is proposed by a number of authors [^12], [^15].
 An ensemble of networks for predicting molecular activity will be built, using the Merck dataset and the approaches listed above. Hyperparameter choices that were found optimal by the cited authors, and recognized optimal activation functions, for different neural network types and prediction types [^4], will also be used.
 
 ## 3. Project Timeline
@@ -89,18 +89,18 @@ TODO: A convincing but not fake conclusion should summarize what the conclusion 
 
 ## 6. Acknowledgments
 
-TODO: Please add acknowledgments to all that contributed or helped on this project.  
+TODO: Please add acknowledgments to all that contributed or helped on this project.
 
 ## 7. References
 
 [^1]: Junshui Ma, R. P. (2015). Deep Neural Nets as a Method for Quantitative Structure-Activity Relationships. Journal of Chemical Information and Modeling, 263-274.
 
 
-[^2]:  National Institute of Health. (2014, November 14). Tox21 Data Challenge 2014. Retrieved from [tripod.nih.gov:] <https://tripod.nih.gov/tox21/challenge/>  
+[^2]:  National Institute of Health. (2014, November 14). Tox21 Data Challenge 2014. Retrieved from [tripod.nih.gov:] <https://tripod.nih.gov/tox21/challenge/>
 
 
 [^3]: Andreas Mayr, G. K. (2016). Deeptox: Toxicity Prediction using Deep Learning. Frontiers in Environmental Science.
-      
+
 
 [^4]: Bronlee, J. (2021, January 22). How to Choose an Activation Function for Deep Learning. Retrieved from [https://machinelearningmastery.com:] <https://machinelearningmastery.com/choose-an-activation-function-for-deep-learning/>
 
@@ -146,7 +146,8 @@ TODO: Please add acknowledgments to all that contributed or helped on this proje
 
 Correlation Coefficient (R2) Formula:
 
-![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/correlation_coefficient.jpg) [^11]
+![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/correlation_coefficient.jpg) 
+[^11]
 
 Sample R2 Code in the R Programming Language:
 ```
@@ -155,7 +156,6 @@ Rsquared <- function(x,y) {
   # R2 = \frac{[\sum_i(x_i-\bar x)(y_i-\bar y)]^2}{\sum_i(x_i-\bar x)^2 \sum_j(y_j-\bar y)^2}
   # Arugments: x = solution activities
   #            y = predicted activities
-  
   if ( length(x) != length(y) ) {
     warning("Input vectors must be same length!")
   }
