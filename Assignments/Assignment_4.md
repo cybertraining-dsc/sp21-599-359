@@ -10,6 +10,8 @@
 
 :o2: References are missing
 
+:o2: Figure 7 has issue
+
 ## Summary 
 
 A performance review of execution times on Google Colab, for five deep learning network examples, was conducted on CPU, GPU and TPU runtime environments using the MNIST dataset.  The networks were 1) a multi-layer perceptron (MLP) network, 2) a convolutional neural network (CNN), 3) a recurrent neural network (RNN), 4) a long short-term memory network (LSTM), and 5) an autoencoder.   
