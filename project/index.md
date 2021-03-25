@@ -8,6 +8,8 @@ Status: final, Type: Project
 
 :oe: due to markdown limitations refernce section must be last
 
+:o2: use subsections in introduction and not *italic*
+
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/project.md)
 
 {{% pageinfo %}}
