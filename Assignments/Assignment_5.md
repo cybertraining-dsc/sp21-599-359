@@ -7,7 +7,6 @@ Status: final, Type: Project
 
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/)
 
-{{% pageinfo %}}
 
 ## Abstract
 
@@ -52,12 +51,12 @@ The training set files each had a column with molecular descriptors that were fo
 The remainder of the columns in each training dataset file indicated disguised substructures of molecules. Values in each row, under the substructure (atom pair and donor-acceptor pair) codes, corresponded to the frequencies at which each of the substructures appeared in each compound. Figure 1 shows part of the head row for one of the training dataset files, and the first 5 records in the file.  
 
 **Figure 1**: Head Row of 1 of 15 Training Dataset files
-![Figure 1](https://github.com/cybertraining-dsc/sp21-599-359/project/images/training_dataset.jpg) 
+![Figure 1](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/training_dataset.jpg) 
 
 The test dataset files were similar (Figure 2) to the training files, except they did not include the column for activity measures. The challenge presented was to predict the activity measures for the test dataset.
 
 **Figure 2**: Head Row of 1 of 15 Test Dataset files
-![Figure 2](https://github.com/cybertraining-dsc/sp21-599-359/project/images/test_dataset.jpg) 
+![Figure 2](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/test_dataset.jpg) 
 
 ### 2.2. A Deep Learning Algorithm
 
@@ -129,7 +128,7 @@ The timeline for execution of the above is as follows:
 
 Correlation Coefficient (R2) Formula:
 
-![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/project/images/correlation_coefficient.jpg) [^11]
+![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/correlation_coefficient.jpg) [^11]
 
 Sample R2 Code in the R Programming Language:
 ```
