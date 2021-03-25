@@ -2,6 +2,8 @@
 
 :o2: References not used as [1] numbered references. Best used as footnotes
 
+:o2: no need to store PDF
+
 Anesu Chaora
 
 Artificial intelligence (AI) is driving transitions in healthcare. A major area where it is driving this transition is in Precision Medicine, where the goal is to enhance efficacies by improving the accuracy of predicting treatment and prevention strategies - based on the characteristics of particular maladies, drug physiochemical properties, and the genetic, environmental and lifestyle factors of individuals or groups of people (MedlinePlus, 2020). An important component to precision medicine is the facility to generate drug profiles that are adapted to the variability in disease and patient profiles. AI-driven approaches are finding and fueling success in this area.
