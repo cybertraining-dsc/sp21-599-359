@@ -155,7 +155,7 @@ TODO: Please add acknowledgments to all that contributed or helped on this proje
 
 ## Appendix 1
 
-$R^2 = \frac{1}{15}\sum{a}{b}$
+Test for hugo: $R^2 = \frac{1}{15}\sum{a}{b}$
 
 Correlation Coefficient (R2) Formula:
 
