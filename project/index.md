@@ -56,7 +56,7 @@ A [dataset](https://www.kaggle.com/c/MerckActivity/data) was provided for the ch
 
 The training set files each had a column with molecular descriptors that were formulated from chemical molecular structures. A second column in the files contained numeric values, corresponding to raw activity measures. These were not normalized, and indicated measures in different units.
 
-The remainder of the columns in each training dataset file indicated disguised substructures of molecules. Values in each row, under the substructure (atom pair and donor-acceptor pair) codes, corresponded to the frequencies at which each of the substructures appeared in each compound. Figure 1 shows part of the head row for one of the training dataset files, and the first 5 records in the file.  
+The remainder of the columns in each training dataset file indicated disguised substructures of molecules. Values in each row, under the substructure (atom pair and donor-acceptor pair) codes, corresponded to the frequencies at which each of the substructures appeared in each compound. Figure 1 shows part of the head row for one of the training dataset files, and the first 5 records in the file.
 
 **Figure 1**: Head Row of 1 of 15 Training Dataset files
 ![Figure 1](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/training_set.jpg) 
