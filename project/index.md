@@ -2,7 +2,7 @@
 
 [![Check  Report](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 [![Status](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
-Status: final, Type: Project
+Status: planing, Type: Project
 
 :o2: figure caltions come underneath the figure
 
