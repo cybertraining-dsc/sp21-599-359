@@ -14,6 +14,8 @@ Status: planing, Type: Project
 
 :o2: Status: final is only be used for grading request at the end of the semester
 
+:o2: no need to have link refernce in introduction, that is what the edit link is for
+
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/project.md)
 
 {{% pageinfo %}}
