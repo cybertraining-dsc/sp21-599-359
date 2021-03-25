@@ -155,6 +155,8 @@ TODO: Please add acknowledgments to all that contributed or helped on this proje
 
 ## Appendix 1
 
+$R^2 = \frac{1}{15}\sum{a}{b}$
+
 Correlation Coefficient (R2) Formula:
 
 ![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/correlation_coefficient.jpg) 
