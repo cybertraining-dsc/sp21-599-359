@@ -6,7 +6,7 @@ Status: final, Type: Project
 
 :o2: figure caltions come underneath the figure
 
-:oe: due to markdown limitations refernce section must be last
+:o2: due to markdown limitations refernce section must be last
 
 :o2: use subsections in introduction and not *italic*
 
