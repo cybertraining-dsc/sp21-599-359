@@ -10,6 +10,8 @@ Status: planing, Type: Project
 
 :o2: use subsections in introduction and not *italic*
 
+:o2: edit link does not work
+
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/project.md)
 
 {{% pageinfo %}}
