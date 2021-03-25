@@ -23,17 +23,13 @@ Contents
 
 ## 1. Introduction
 
-Please note that an up to date version of these instructions is available at
-
-* <https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/index.md>
-
-*De novo molecular design* 
+### 1.1 De novo molecular design 
 
 Deep learning (DL) is finding new uses in developing novel chemical structures. Methods that employ variational autoencoders (VAE) have been used to generate new chemical structures by 1) encoding input string molecule structures, 2) reparametrizing the underlying latent variables and then 3) searching for viable solutions in the latent space, by using methods such as Bayesian optimizations. A final step involves decoding the results back into simplified molecular-input line-entry system (SMILES) notation, for recovery of molecular descriptors. Variations to this involve using generative adversarial networks (GAN), as subnetworks in the architecture, to generate the new chemical structures [^8].
 
 Other methods for developing new chemical structures include use of recurrent neural networks (RNN) to generate new valid SMILES strings, after training the RNNs on large quantities of known SMILES datasets. The RNNs use probability distributions learned from training sets, to generate new strings that correspond to new molecular structures [^13]. Variations to this approach incorporate reinforcement learning to reward models for new chemical structures, while punishing them for undesirable results [^16].
 
-*Bioactivity prediction* 
+## 1.2 Bioactivity prediction 
 
 Computational methods have been used in drug development for decades [^7]. The emergence of high-throughput screening (HTS), in which automated equipment is used to conduct large assays of scientific experiments on molecular compounds in parallel, has resulted in generation of enormous amounts of data that require processing.  Quantitative structure activity relationship (QSAR) models for predicting the biological activity responses to physiochemical properties of predictor chemicals, regularly use machine learning models like support vector machines (SVM) and random decision forests (RF) for this processing [^8], [^5].
 
