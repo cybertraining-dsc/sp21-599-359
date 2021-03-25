@@ -12,6 +12,8 @@ Status: planing, Type: Project
 
 :o2: edit link does not work, should be https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/index.md, e.g. template is just using index.md instead of project to make it easier for you
 
+:o2: Status: final is only be used for grading request at the end of the semester
+
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/project.md)
 
 {{% pageinfo %}}
