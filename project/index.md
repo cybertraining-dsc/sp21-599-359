@@ -2,8 +2,21 @@
 
 [![Check  Report](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 [![Status](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
-Status: final, Type: Project
+Status: planing, Type: Project
 
+:o2: demonstrate git pull
+
+:o2: figure caltions come underneath the figure
+
+:o2: due to markdown limitations refernce section must be last
+
+:o2: use subsections in introduction and not *italic*
+
+:o2: edit link does not work, should be https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/index.md, e.g. template is just using index.md instead of project to make it easier for you
+
+:o2: Status: final is only be used for grading request at the end of the semester
+
+:o2: no need to have link refernce in introduction, that is what the edit link is for
 
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/project.md)
 
@@ -139,6 +152,8 @@ TODO: Please add acknowledgments to all that contributed or helped on this proje
 
 
 ## Appendix 1
+
+Test for hugo: $R^2 = \frac{1}{15}\sum{a}{b}$
 
 Correlation Coefficient (R2) Formula:
 

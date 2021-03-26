@@ -1,5 +1,11 @@
 # Deep Learning in Drug Discovery
 
+:o2: figures do not show, but use of raw  for figures is needed. not sure why  they not show up, please chack urls
+
+:o2: empty line after figure inclusion missing
+
+:o2: due to markdown refernce section must be last
+
 [![Check  Report](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 [![Status](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 Status: final, Type: Project
