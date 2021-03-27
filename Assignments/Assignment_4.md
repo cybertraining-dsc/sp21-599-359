@@ -21,78 +21,78 @@ To leverage advantages of using TPUs, optimizations could have been applied to t
 
 ## Appendix:
 
-![Table 1](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/runtime_performance.jpg)
 **Table 1:** Summary of CPU, GPU, TPU Performance
+![Table 1](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/runtime_performance.jpg)
 
 
 ### Multi-Layer Perceptron (MLP) Example using MNIST Dataset
 
-**Figure 1:** MLP using CPUs only
-![Figure 1](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/mlp_cpu.jpg)
+**Table 2:** MLP using CPUs only
+![Table 2](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/mlp_cpu.jpg)
 
 
-**Figure 2:** MLP using GPUs
-![Figure 2](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/mlp_gpu.jpg)
+**Table 3:** MLP using GPUs
+![Table 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/mlp_gpu.jpg)
 
 
-**Figure 3:** MLP using TPUs
-![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/mlp_tpu.jpg)
+**Table 4:** MLP using TPUs
+![Table 4](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/mlp_tpu.jpg)
 
 
 ### Convolutional Neural Networks (CNN) Example using MNIST Dataset
 
-**Figure 4:** CNN using CPUs only
-![Figure 4](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/cnn_cpu.jpg)
+**Table 5:** CNN using CPUs only
+![Table 5](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/cnn_cpu.jpg)
 
 
-**Figure 5:** CNN using GPUs
-![Figure 5](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/cnn_gpu.jpg)
+**Table 6:** CNN using GPUs
+![Table 6](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/cnn_gpu.jpg)
 
 
-**Figure 6:** CNN using TPUs
-![Figure 6](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/cnn_tpu.jpg)
+**Table 7:** CNN using TPUs
+![Table 7](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/cnn_tpu.jpg)
 
 
 ### Recurrent Neural Networks (RNN) Example using MNIST Dataset
 
-**Figure 7:** RNN using CPUs only
-![Figure 7](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/rnn_cpu.jpg)
+**Table 8:** RNN using CPUs only
+![Table 8](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/rnn_cpu.jpg)
 
 
-**Figure 8:** RNN using GPUs
-![Figure 8](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/rnn_gpu.jpg)
+**Table 9:** RNN using GPUs
+![Table 9](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/rnn_gpu.jpg)
 
 
-**Figure 9:** RNN using TPUs
-![Figure 9](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/rnn_tpu.jpg)
+**Table 10:** RNN using TPUs
+![Table 10](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/rnn_tpu.jpg)
 
 
 ### Long Short-Term Memory (LSTM) Example using MNIST Dataset
 
-**Figure 10:** LSTM using CPUs only
-![Figure 10](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/lstm_cpu.jpg)
+**Table 11:** LSTM using CPUs only
+![Table 11](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/lstm_cpu.jpg)
 
 
-**Figure 11:** LSTM using GPUs
-![Figure 11](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/lstm_gpu.jpg)
+**Table 12:** LSTM using GPUs
+![Table 12](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/lstm_gpu.jpg)
 
 
-**Figure 12:** LSTM using TPUs
-![Figure 12](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/lstm_tpu.jpg)
+**Table 13:** LSTM using TPUs
+![Table 13](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/lstm_tpu.jpg)
 
 
 ### Autoencoder Example using MNIST Dataset
 
-**Figure 13:** Autoencoder using CPUs only
-![Figure 13](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/autoencoder_cpu.jpg)
+**Table 14:** Autoencoder using CPUs only
+![Table 14](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/autoencoder_cpu.jpg)
 
 
-**Figure 14: Autoencoder using GPUs**
-![Figure 14](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/autoencoder_gpu.jpg)
+**Table 15: Autoencoder using GPUs**
+![Table 15](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/autoencoder_gpu.jpg)
 
 
-**Figure 15:** Autoencoder using TPUs
-![Figure 15](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/autoencoder_tpu.jpg)
+**Table 16:** Autoencoder using TPUs
+![Table 16](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/Assignments/images/autoencoder_tpu.jpg)
 
 
 ## References
