@@ -18,7 +18,7 @@ Status: planing, Type: Project
 
 :o2: no need to have link refernce in introduction, that is what the edit link is for
 
-Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/project.md)
+Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/index.md)
 
 {{% pageinfo %}}
 
@@ -36,13 +36,13 @@ Contents
 
 ## 1. Introduction
 
-### 1.1 De novo molecular design 
+### 1.1. De novo molecular design 
 
 Deep learning (DL) is finding new uses in developing novel chemical structures. Methods that employ variational autoencoders (VAE) have been used to generate new chemical structures by 1) encoding input string molecule structures, 2) reparametrizing the underlying latent variables and then 3) searching for viable solutions in the latent space, by using methods such as Bayesian optimizations. A final step involves decoding the results back into simplified molecular-input line-entry system (SMILES) notation, for recovery of molecular descriptors. Variations to this involve using generative adversarial networks (GAN), as subnetworks in the architecture, to generate the new chemical structures [^8].
 
 Other methods for developing new chemical structures include use of recurrent neural networks (RNN) to generate new valid SMILES strings, after training the RNNs on large quantities of known SMILES datasets. The RNNs use probability distributions learned from training sets, to generate new strings that correspond to new molecular structures [^13]. Variations to this approach incorporate reinforcement learning to reward models for new chemical structures, while punishing them for undesirable results [^16].
 
-## 1.2 Bioactivity prediction 
+## 1.2. Bioactivity prediction 
 
 Computational methods have been used in drug development for decades [^7]. The emergence of high-throughput screening (HTS), in which automated equipment is used to conduct large assays of scientific experiments on molecular compounds in parallel, has resulted in generation of enormous amounts of data that require processing.  Quantitative structure activity relationship (QSAR) models for predicting the biological activity responses to physiochemical properties of predictor chemicals, regularly use machine learning models like support vector machines (SVM) and random decision forests (RF) for this processing [^8], [^5].
 
@@ -67,13 +67,17 @@ The training set files each had a column with molecular descriptors that were fo
 
 The remainder of the columns in each training dataset file indicated disguised substructures of molecules. Values in each row, under the substructure (atom pair and donor-acceptor pair) codes, corresponded to the frequencies at which each of the substructures appeared in each compound. Figure 1 shows part of the head row for one of the training dataset files, and the first 5 records in the file.
 
-**Figure 1**: Head Row of 1 of 15 Training Dataset files
+
 ![Figure 1](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/training_set.jpg) 
+**Figure 1**: Head Row of 1 of 15 Training Dataset files
+
 
 The test dataset files were similar (Figure 2) to the training files, except they did not include the column for activity measures. The challenge presented was to predict the activity measures for the test dataset.
 
-**Figure 2**: Head Row of 1 of 15 Test Dataset files
+
 ![Figure 2](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/test_set.jpg) 
+**Figure 2**: Head Row of 1 of 15 Test Dataset files
+
 
 ### 2.2. A Deep Learning Algorithm
 
@@ -100,7 +104,40 @@ TODO: A convincing but not fake conclusion should summarize what the conclusion 
 
 TODO: Please add acknowledgments to all that contributed or helped on this project.
 
-## 7. References
+
+## Appendix
+
+Test for hugo: $R^2 = \frac{1}{15}\sum{a}{b}$
+
+Correlation Coefficient (R2) Formula:
+
+![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/correlation_coefficient.jpg)
+[^11]
+
+Sample R2 Code in the R Programming Language:
+```
+Rsquared <- function(x,y) {
+  # Returns R-squared.
+  # R2 = \frac{[\sum_i(x_i-\bar x)(y_i-\bar y)]^2}{\sum_i(x_i-\bar x)^2 \sum_j(y_j-\bar y)^2}
+  # Arugments: x = solution activities
+  #            y = predicted activities
+  if ( length(x) != length(y) ) {
+    warning("Input vectors must be same length!")
+  }
+  else {
+    avx <- mean(x)
+    avy <- mean(y)
+    num <- sum( (x-avx)*(y-avy) )
+    num <- num*num
+    denom <- sum( (x-avx)*(x-avx) ) * sum( (y-avy)*(y-avy) )
+    return(num/denom)
+  }
+}
+```
+[^11]
+
+
+## References
 
 [^1]: Junshui Ma, R. P. (2015). Deep Neural Nets as a Method for Quantitative Structure-Activity Relationships. Journal of Chemical Information and Modeling, 263-274.
 
@@ -148,37 +185,3 @@ TODO: Please add acknowledgments to all that contributed or helped on this proje
 
 
 [^16]: N Jaques, S. G. (2017). Sequence Tutor: Conservative Fine-Tuning of Sequence Generation Models with KL-control. Proceedings of the 34th International Conference on Machine Learning, PMLR (pp. 1645-1654). MLResearchPress.
-
-
-
-## Appendix 1
-
-Test for hugo: $R^2 = \frac{1}{15}\sum{a}{b}$
-
-Correlation Coefficient (R2) Formula:
-
-![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/correlation_coefficient.jpg) 
-[^11]
-
-Sample R2 Code in the R Programming Language:
-```
-Rsquared <- function(x,y) {
-  # Returns R-squared.
-  # R2 = \frac{[\sum_i(x_i-\bar x)(y_i-\bar y)]^2}{\sum_i(x_i-\bar x)^2 \sum_j(y_j-\bar y)^2}
-  # Arugments: x = solution activities
-  #            y = predicted activities
-  if ( length(x) != length(y) ) {
-    warning("Input vectors must be same length!")
-  }
-  else {
-    avx <- mean(x) 
-    avy <- mean(y)
-    num <- sum( (x-avx)*(y-avy) )
-    num <- num*num
-    denom <- sum( (x-avx)*(x-avx) ) * sum( (y-avy)*(y-avy) )
-    return(num/denom)
-  }
-}
-```
-[^11]
-
