@@ -1,10 +1,5 @@
 # Deep Learning in Drug Discovery
 
-:o2: figures do not show, but use of raw  for figures is needed. not sure why  they not show up, please chack urls
-
-:o2: empty line after figure inclusion missing
-
-:o2: due to markdown refernce section must be last
 
 [![Check  Report](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 [![Status](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
@@ -56,10 +51,12 @@ The remainder of the columns in each training dataset file indicated disguised s
 ![Figure 1](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/training_set.jpg)
 
 
+
 The test dataset files were similar (Figure 2) to the training files, except they did not include the column for activity measures. The challenge presented was to predict the activity measures for the test dataset.
 
 **Figure 2**: Head Row of 1 of 15 Test Dataset files
 ![Figure 2](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/test_set.jpg)
+
 
 
 ### 2.2. A Deep Learning Algorithm
