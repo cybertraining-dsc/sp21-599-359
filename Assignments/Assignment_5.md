@@ -30,7 +30,7 @@ While deep learning (DL) approaches have an advantage over single-layer machine 
 
 Their applications have included profiling tumors at molecular level and predicting drug response based on pharmacological and biological molecular structures, functions, and dynamics. This is attributed to their ability to handle high dimensionality in data features, making them appealing for use in predicting drug response [^5].
 
-For example, DL models were found to perform better than standard RF models [^1] in predicting the biological activities of molecular compounds, using datasets from the Merck Molecular Activity Challenge on Kaggle [^11]. Deep neural networks were also used in models that won NIH’s Toxi21 Challenge [^2] on using chemical structure data only to predict compounds of concern to human health [^3].
+For example, deep neural networks were used in models that won NIH’s Toxi21 Challenge [^2] on using chemical structure data only to predict compounds of concern to human health [^3]. DL models were also found to perform better than standard RF models [^1] in predicting the biological activities of molecular compounds in the Merck Molecular Activity Challenge on Kaggle [^11]. Details of the challenge follow.
 
 
 ## 2. Related Work
