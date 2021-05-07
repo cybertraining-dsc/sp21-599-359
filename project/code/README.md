@@ -21,6 +21,6 @@ To run code from this project, open the predicting_molecular_activity.ipynb note
 
    Cloudmesh StopWatch benchmark time: 8 mins 56 seconds
 
-## Run last section of code in redicting_molecular_activity.ipynb notebook to train the model, evaluate it, and to predict molecular activity 
+## Run last section of code in predicting_molecular_activity.ipynb notebook to train the model, evaluate it, and to predict molecular activity 
 
    Cloudmesh StopWatch benchmark time: 7 min 45 seconds, using GPU hardware accelerator and High-RAM Colab runtime environment
