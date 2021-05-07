@@ -2,7 +2,7 @@
 
 [![Check  Report](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 [![Status](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
-Status: planning, Type: Project
+Status: in progress, Type: Project
 
 
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/index.md)
@@ -91,7 +91,7 @@ A subscription account to the service was employed, for access to more RAM (High
 
 GPU hardware accelerators were used for the runtime configuration.
 
-Prerequisites for the code included packages from [Cloudmesh](http://cloudmesh.github.io/ ), for benchmarking performance, and [Kaggle](https://www.kaggle.com/ ), for API access to related data.
+Prerequisites for the code included packages from [Cloudmesh](http://cloudmesh.github.io/ ), for benchmarking performance, and from [Kaggle](https://www.kaggle.com/ ), for API access to related data.
 
 Keras libraries were used for implementing the molecular activity prediction model.
 
@@ -101,7 +101,7 @@ Benchmarks captured during code execution, using cloudmesh-common [^2] were as f
 
 * The data download process from Kaggle, through the Kaggle data API, took 29 seconds.
 
-* Data preprocessing scripts took 8 minutes 56 seconds to render the data ready for training and evaluation. Preprocessing of data included iterating through the 15 datasets. Each dataset had different combinations of feature columns (molecular substructures), and as such were processed separately.
+* Data preprocessing scripts took 8 minutes 56 seconds to render the data ready for training and evaluation. Preprocessing of data included iterating through the 15 datasets. Each dataset had different combinations of feature columns (molecular substructures), and as such they were processed separately.
 
 * The model training, evaluation and prediction step took 7 minutes 45 seconds.
 
