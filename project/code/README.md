@@ -1,4 +1,4 @@
-# Deep Learning in Drug Discover Code Instructions (For Google Colab)
+# Deep Learning in Drug Discovery Code Instructions (For Google Colab)
 
 
 To run code from this project, open the predicting_molecular_activity.ipynb notebook in Google Colab (https://colab.research.google.com)
