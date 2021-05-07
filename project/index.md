@@ -97,6 +97,9 @@ Keras libraries were used for implementing the molecular activity prediction mod
 
 ### 4.2 Implementation Overview
 
+The implementation consisted of a fully connected neural network. The network was trained on the 15 datasets separately, but iteratively, with evaluations and predictions of molecular activity executed for each dataset. This was necessitated by the fact that the 15 datasets had different feature set columns, corresponding to different molecular substructures. As such, they could not readily be combined into a monolithic dataset, nor was there any value found in approaching the problem that way.
+
+An additional confounding factor with the data was that it was missing the molecular activity results (actual readings) associated with the dataset provided for testing. These were not available through Kaggle as the original competition withheld these from contestants, reserving them as a means for evaluating the accuracy of the models submitted. In the absence of this data, for validating the results of this project, the available training data was split into samples that were when used for the exercise. The training of the fully connected network was allocated 80% of the data, while the testing/evaluation of the model was allocated 10% of the data. The remaining data (10%) was used for evaluating predictions.
 
 ### 4.3 Benchmarks
 
