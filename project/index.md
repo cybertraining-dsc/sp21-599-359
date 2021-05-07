@@ -79,10 +79,37 @@ An ensemble of networks for predicting molecular activity will be built, using t
 The timeline for execution of the above is as follows: A working fully connected network solution will be developed by April 9th, 2021. This will be followed by an ensemble version that employs a convolutional neural network with the fully connected network. This is scheduled to be complete by April 23rd. 
 A full report of the work done will be completed by May 2nd , 2021.
 
+## 4. Project Implementation
 
-## 4. Benchmark
+Implementation details for the project were as follows:
 
-TODO: Your project must include a benchmark. The easiest is to use cloudmesh-common [^2]
+### 4.1 Tools and Environment
+
+The Python programming language (version 3.7.10) was used on Google Colab (https://colab.research.google.com).
+
+A subscription account to the service was employed, for access to more RAM (High-RAM runtime shape) during development, although the free standard subscription will suffice for the version of code included in this repository.
+
+GPU hardware accelerators were used for the runtime configuration.
+
+Prerequisites for the code included packages from [Cloudmesh](http://cloudmesh.github.io/ ), for benchmarking performance, and [Kaggle](https://www.kaggle.com/ ), for API access to related data.
+
+Keras libraries were used for implementing the molecular activity prediction model.
+
+### 4.2 Benchmarks
+
+Benchmarks captured during code execution, using cloudmesh-common [^2] were as follows:
+
+* The data download process from Kaggle, through the Kaggle data API, took 29 seconds.
+
+* Data preprocessing scripts took 8 minutes 56 seconds to render the data ready for training and evaluation. Preprocessing of data included iterating through the 15 datasets. Each dataset had different combinations of feature columns (molecular substructures), and as such were processed separately.
+
+* The model training, evaluation and prediction step took 7 minutes 45 seconds.
+
+### 4.3 Findings
+
+
+### 4.4 Discussion
+
  
 ## 5. Conclusion
 
