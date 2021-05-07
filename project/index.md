@@ -52,7 +52,7 @@ A [dataset](https://www.kaggle.com/c/MerckActivity/data) was provided for the ch
 
 The training set files each had a column with molecular descriptors that were formulated from chemical molecular structures. A second column in the files contained numeric values, corresponding to raw activity measures. These were not normalized and indicated measures in different units.
 
-The remainder of the columns in each training dataset file indicated disguised substructures of molecules. Values in each row, under the substructure (atom pair and donor-acceptor pair) codes, corresponded to the frequencies at which each of the substructures appeared in each compound. Figure 1 shows part of the head row for one of the training datasets files, and the first 5 records in the file.
+The remainder of the columns in each training dataset file indicated disguised substructures of molecules. Values in each row, under the substructure (atom pair and donor-acceptor pair) codes, corresponded to the frequencies at which each of the substructures appeared in each compound. Figure 1 shows part of the head row for one of the training datasets files, and the first records in the file.
 
 
 ![Figure 1](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/training_set.jpg) 
@@ -70,14 +70,14 @@ The test dataset files were similar (Figure 2) to the training files, except the
 
 The entry that won the Merck Molecular Activity Challenge on Kaggle used an ensemble of methods that included a fully connected neural network as the main contributor to the high accuracy in predicting molecular activity [^1]. Evaluations of predictions for molecular activity for the test set assays were then determined using the mean of the correlation coefficient (R2) of the 15 data sets. Sample code in R was provided for evaluating the correlation coefficient. The code, and formula for R2 are appended in Appendix 1.
 
-The approach of employing convolutional networks on substructures of molecules, to concentrate learning on localized features, while reducing the number of parameters in the overall network, holds promise in improving the molecular activity predictions. This methodology of identifying molecular substructures as graph convolutions, prior to further processing, is proposed by several authors [^12], [^15].
+An approach of employing convolutional networks on substructures of molecules, to concentrate learning on localized features, while reducing the number of parameters in the overall network, was also proposed in literature on improving molecular activity predictions. This methodology of identifying molecular substructures as graph convolutions, prior to further processing, was discussed by authors [^12], [^15].
 
-An ensemble of networks for predicting molecular activity will be built, using the Merck dataset and the approaches listed above. Hyperparameter choices that were found optimal by the cited authors, and recognized optimal activation functions, for different neural network types and prediction types [^4], will also be used.
+In line with the above research, an ensemble of networks for predicting molecular activity was planned for this project, using the Merck dataset, and hyperparameter configurations found optimal by the cited authors. Recognized optimal activation functions, for different neural network types and prediction types [^4], were also earmarked for use on the project.
 
 ## 3. Project Timeline
 
-The timeline for execution of the above is as follows: A working fully connected network solution will be developed by April 9th, 2021. This will be followed by an ensemble version that employs a convolutional neural network with the fully connected network. This is scheduled to be complete by April 23rd. 
-A full report of the work done will be completed by May 2nd , 2021.
+The timeline for execution of the above was planned as follows: A working fully connected network solution was scheduled for development by April 9th, 2021. This was to be followed by an ensemble model that would employ a convolutional neural network with the fully connected network. This was scheduled for completion by April 23rd, 2021. 
+A full report of the work done was scheduled for completion by May 2nd , 2021.
 
 ## 4. Project Implementation
 
@@ -95,7 +95,10 @@ Prerequisites for the code included packages from [Cloudmesh](http://cloudmesh.g
 
 Keras libraries were used for implementing the molecular activity prediction model.
 
-### 4.2 Benchmarks
+### 4.2 Implementation Overview
+
+
+### 4.3 Benchmarks
 
 Benchmarks captured during code execution, using cloudmesh-common [^2] were as follows:
 
@@ -105,19 +108,17 @@ Benchmarks captured during code execution, using cloudmesh-common [^2] were as f
 
 * The model training, evaluation and prediction step took 7 minutes 45 seconds.
 
-### 4.3 Findings
+### 4.4 Findings
 
 
-### 4.4 Discussion
+## 5. Discussion
 
  
-## 5. Conclusion
+## 6. Conclusion
 
 TODO: A convincing but not fake conclusion should summarize what the conclusion of the project is.
 
-## 6. Acknowledgments
-
-TODO: Please add acknowledgments to all that contributed or helped on this project.
+## 7. Acknowledgments
 
 
 ## Appendix
