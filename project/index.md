@@ -7,6 +7,8 @@ Status: final, Type: Project
 
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/index.md)
 
+* Code: [predicting_molecular_activity.ipynb](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/code/predicting_molecular_activity.ipynb)
+
 {{% pageinfo %}}
 
 ## Abstract
