@@ -74,10 +74,6 @@ An approach of employing convolutional networks on substructures of molecules, t
 
 In line with the above research, an ensemble of networks for predicting molecular activity was planned for this project, using the Merck dataset, and hyperparameter configurations found optimal by the cited authors. Recognized optimal activation functions, for different neural network types and prediction types [^4], were also earmarked for use on the project.
 
-## 3. Project Timeline
-
-The timeline for execution of the above was planned as follows: A working fully connected network solution was scheduled for development by April 9th, 2021. This was to be followed by an ensemble model that would employ a convolutional neural network with the fully connected network. This was scheduled for completion by April 23rd, 2021. 
-A full report of the work done was scheduled for completion by May 2nd , 2021.
 
 ## 4. Project Implementation
 
@@ -115,6 +111,7 @@ Benchmarks captured during code execution, using cloudmesh-common [^2] were as f
 
 The correlation coefficient (R^2) values obtained during training and evaluation were considerably low (< 0.1), as such predictions for molecular activity were also significantly off target from the actual activity measures. The predictions were thus unreliable.
 
+
 ## 5. Discussion
 
 An overwhelming proportion of the data elements provided through the datasets were zeros (0)s, indicating that no frequencies of the molecular substructures/features were present in the molecules represented by particular rows of data elements. This disproportionate representation of absent molecular substructure frequencies, versus the significantly lower instances where there were frequencies appears to have had an effect of dampening the learning of the fully connected neural network.
@@ -122,14 +119,17 @@ An overwhelming proportion of the data elements provided through the datasets we
 This supports approaches that advocated for the use of convolutional neural networks [^12], [^15] as auxiliary components to help focus learning on pertinent substructures. While the planning phase of this project had incorporated inclusion of such, the investigator ran out of time to implement an ensemble network that would include the suggestions.
 
 Apart from employing convolutions, other preprocessing approaches for rescaling, and normalizing, the data features and activations [^17] could have helped the learning, and subsequently the predictions made. This reinforces the fact that deep learning models, as is true with other machine learning approaches, rely deeply on the quality of data fed into them.
- 
+
+
 ## 6. Conclusion
 
 Deep learning is a very powerful new approach to solving many machine learning problems, including some that have eluded solutions till now. While deep learning models offer robust and sophisticated ways of learning patterns in data, they are still only half the story. The quality and appropriate preparation of the data fed into models is equally important when seeking to have meaningful results.
 
+
 ## 7. Acknowledgments
 
 Acknowledgements go to Dr. Geoffrey Fox for his excellent guidance on ways to think about deep learning approaches, and for his instructorship of the course 'ENG-E599: AI-First Engineering', for which this project is a deliverable. Acknowledgements also go to Dr. Gregor von Laszewski for his astute tips and recommendations on technical matters, and on coding and documention etiquette.
+
 
 ## 8. Appendix
 
