@@ -137,8 +137,6 @@ Acknowledgements go to Dr. Geoffrey Fox for his excellent guidance on ways to th
 
 ## 8. Appendix
 
-Test for hugo: $R^2 = \frac{1}{15}\sum{a}{b}$
-
 Square of the Correlation Coefficient (R2) Formula:
 
 ![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/correlation_coefficient.jpg)
