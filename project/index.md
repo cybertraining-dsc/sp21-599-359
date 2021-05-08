@@ -11,7 +11,7 @@ Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/)
 
 ## Abstract
 
-Machine learning has been a mainstay in drug discovery for decades. Artificial neural networks have been used in computational approaches to drug discovery since the 1990s [^1]. Under the traditional approaches, emphasis in drug discovery was placed on understanding chemical molecular fingerprints in order to predict biological activity. More recently, however, deep learning approaches have been adopted instead of computational methods. This paper outlines work conducted on predicting drug molecular activity using deep learning approaches.
+Machine learning has been a mainstay in drug discovery for decades. Artificial neural networks have been used in computational approaches to drug discovery since the 1990s [^1]. Under traditional approaches, emphasis in drug discovery was placed on understanding chemical molecular fingerprints, in order to predict biological activity. More recently however, deep learning approaches have been adopted instead of computational methods. This paper outlines work conducted in predicting drug molecular activity, using deep learning approaches.
 
 Contents
 
@@ -25,9 +25,9 @@ Contents
 
 ### 1.1. De novo molecular design 
 
-Deep learning (DL) is finding new uses in developing novel chemical structures. Methods that employ variational autoencoders (VAE) have been used to generate new chemical structures by 1) encoding input string molecule structures, 2) reparametrizing the underlying latent variables and then 3) searching for viable solutions in the latent space, by using methods such as Bayesian optimizations. An ultimate step involves decoding the results back into simplified molecular-input line-entry system (SMILES) notation, for recovery of molecular descriptors. Variations to this involve using generative adversarial networks (GAN), as subnetworks in the architecture, to generate the new chemical structures [^8].
+Deep learning (DL) is finding uses in developing novel chemical structures. Methods that employ variational autoencoders (VAE) have been used to generate new chemical structures. Approaches have involved encoding input string molecule structures, then reparametrizing the underlying latent variables, before searching for viable solutions in the latent space by using methods such as Bayesian optimizations. The results are then decoded back into simplified molecular-input line-entry system (SMILES) notation, for recovery of molecular descriptors. Variations to this method involve using generative adversarial networks (GAN)s, as subnetworks in the architecture, to generate the new chemical structures [^8].
 
-Other methods for developing new chemical structures include use of recurrent neural networks (RNN) to generate new valid SMILES strings, after training the RNNs on copious quantities of known SMILES datasets. The RNNs use probability distributions learned from training sets, to generate new strings that correspond to new molecular structures [^13]. Variations to this approach incorporate reinforcement learning to reward models for new chemical structures, while punishing them for undesirable results [^16].
+Other approaches for developing new chemical structures involve recurrent neural networks (RNN), to generate new valid SMILES strings, after training the RNNs on copious quantities of known SMILES datasets. The RNNs use probability distributions learned from training sets, to generate new strings that correspond to molecular structures [^13]. Variations to this approach incorporate reinforcement learning to reward models for new chemical structures, while punishing them for undesirable results [^16].
 
 ## 1.2. Bioactivity prediction 
 
@@ -97,7 +97,7 @@ Keras libraries were used for implementing the molecular activity prediction mod
 
 ### 4.2 Implementation Overview
 
-The implementation consisted of a fully connected neural network. The network was trained on the 15 datasets separately, but iteratively, with evaluations and predictions of molecular activity executed for each dataset. This was necessitated by the fact that the 15 datasets had different feature set columns, corresponding to different molecular substructures. As such, they could not readily be combined into a monolithic dataset, nor was there any value found in approaching the problem that way.
+The implementation consisted of a fully connected neural network. The network was trained on the 15 datasets separately, but iteratively, with evaluations and predictions of molecular activity executed for each dataset. This was necessitated by the fact that the 15 datasets had different feature set columns, corresponding to different molecular substructures. As such, they could not be readily processed in a single dataframe.
 
 An additional confounding factor with the data was that it was missing the molecular activity results (actual readings) associated with the dataset provided for testing. These were not available through Kaggle as the original competition withheld these from contestants, reserving them as a means for evaluating the accuracy of the models submitted. In the absence of this data, for validating the results of this project, the available training data was split into samples that were when used for the exercise. The training of the fully connected network was allocated 80% of the data, while the testing/evaluation of the model was allocated 10% of the data. The remaining data (10%) was used for evaluating predictions.
 
@@ -107,22 +107,29 @@ Benchmarks captured during code execution, using cloudmesh-common [^2] were as f
 
 * The data download process from Kaggle, through the Kaggle data API, took 29 seconds.
 
-* Data preprocessing scripts took 8 minutes 56 seconds to render the data ready for training and evaluation. Preprocessing of data included iterating through the 15 datasets. Each dataset had different combinations of feature columns (molecular substructures), and as such they were processed separately.
+* Data preprocessing scripts took 8 minutes and 56 seconds to render the data ready for training and evaluation. Preprocessing of data included iterating through the issued datasets separately, since each file contained different combinations of feature columns (molecular substructures).
 
-* The model training, evaluation and prediction step took 7 minutes 45 seconds.
+* The model training, evaluation and prediction step took 7 minutes and 45 seconds.
 
 ### 4.4 Findings
 
+The correlation coefficient (R^2) values obtained during training and evaluation were considerably low (< 0.1), as such predictions for molecular activity were also significantly off. No meaningful predictions were obtained from the model.
 
 ## 5. Discussion
 
+An overwhelming proportion of the data elements provided through the datasets were zeros (0)s, indicating that no frequencies of the molecular substructures/features were present in the molecules represented by particular rows of data elements. This disproportionate representation of absent molecular substructure frequencies, versus the significantly lower instances where there were frequencies appears to have had an effect of dampening the learning of the fully connected neural network.
+
+This supports approaches that advocated for the use of convolutional neural networks [^12], [^15] as auxiliary components to help focus learning on pertinent substructures. While the planning phase of this project had incorporated inclusion of such, the investigator ran out of time to implement an ensemble network that would include the suggestion.
+
+Apart from employing convolutions, other preprocessing approaches for rescaling, and normalizing, the data features and activations [^17] may have helped the learning, and subsequently the predictions made.
  
 ## 6. Conclusion
 
-TODO: A convincing but not fake conclusion should summarize what the conclusion of the project is.
+Deep learning is a very powerful new approach to solving many machine learning problems, including some that have eluded solutions till now. While deep learning models offer robust and sophisticated ways of learning patterns in data, they are still only half the story. The quality and appropriate preparation of the data fed into models is equally important when seeking to have meaningful results.
 
 ## 7. Acknowledgments
 
+I wish to acknowledge Geoffrey Fox for excellent guidance on ways to think about deep learning approaches, and for his instructorship of the course 'ENG-E599: AI-First Engineering', for which this project is a deliverable. I also wish to acknowledge Gregor von Laszewski for astute tips and recommendations on technical matters, and coding and documention etiquette.
 
 ## Appendix
 
@@ -204,3 +211,6 @@ Rsquared <- function(x,y) {
 
 
 [^16]: N Jaques, S. G. (2017). Sequence Tutor: Conservative Fine-Tuning of Sequence Generation Models with KL-control. Proceedings of the 34th International Conference on Machine Learning, PMLR (pp. 1645-1654). MLResearchPress.
+
+
+[^17]: RuwanT (2017, May 16). Merk. Retrieved from [https://github.com:] <https://github.com/RuwanT/merck/blob/master/README.md>
