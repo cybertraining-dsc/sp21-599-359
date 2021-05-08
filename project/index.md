@@ -2,7 +2,7 @@
 
 [![Check  Report](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 [![Status](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
-Status: in progress, Type: Project
+Status: Final, Type: Project
 
 
 Anesu Chaora, [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-359/blob/main/project/index.md)
@@ -29,13 +29,13 @@ Deep learning (DL) is finding uses in developing novel chemical structures. Meth
 
 Other approaches for developing new chemical structures involve recurrent neural networks (RNN), to generate new valid SMILES strings, after training the RNNs on copious quantities of known SMILES datasets. The RNNs use probability distributions learned from training sets, to generate new strings that correspond to molecular structures [^13]. Variations to this approach incorporate reinforcement learning to reward models for new chemical structures, while punishing them for undesirable results [^16].
 
-## 1.2. Bioactivity prediction 
+### 1.2. Bioactivity prediction 
 
-Computational methods have been used in drug development for decades [^7]. The emergence of high-throughput screening (HTS), in which automated equipment is used to conduct large assays of scientific experiments on molecular compounds in parallel, has resulted in generation of enormous amounts of data that require processing. Quantitative structure activity relationship (QSAR) models for predicting the biological activity responses to physiochemical properties of predictor chemicals, extensively use machine learning models like support vector machines (SVM) and random decision forests (RF) for this processing [^8], [^5].
+Computational methods have been used in drug development for decades [^7]. The emergence of high-throughput screening (HTS), in which automated equipment is used to conduct large assays of scientific experiments on molecular compounds in parallel, has resulted in generation of enormous amounts of data that require processing. Quantitative structure activity relationship (QSAR) models for predicting the biological activity responses to physiochemical properties of predictor chemicals, extensively use machine learning models like support vector machines (SVM) and random decision forests (RF) for processing [^8], [^5].
 
-While deep learning (DL) approaches have an advantage over single-layer machine learning methods, when predicting biological activity responses to properties of predictor chemicals, they have only recently been used for this [^8]. The need to interpret how predictions are made through computationally oriented drug discovery, is seen - in part - as a factor to why DL approaches have not been adopted as quickly in this area [^6]. However, because DL models can learn complex non-linear data patterns, using their multiple hidden layers to capture patterns in data, they are better suited for processing complex life sciences data than other machine learning approaches [^6].
+While deep learning (DL) approaches have an advantage over single-layer machine learning methods, when predicting biological activity responses to properties of predictor chemicals, they have only recently been used for this [^8]. The need to interpret how predictions are made through computationally oriented drug discovery, is seen - in part - as a factor to why DL approaches have not been adopted as quickly in this area [^6]. However, because DL models can learn complex non-linear data patterns, using their multiple hidden layers to capture patterns in data, they are better suited for processing complex life sciences data, than other machine learning approaches [^6].
 
-Their applications have included profiling tumors at molecular level and predicting drug response based on pharmacological and biological molecular structures, functions, and dynamics. This is attributed to their ability to handle high dimensionality in data features, making them appealing for use in predicting drug response [^5].
+Their applications have included profiling tumors at molecular level and predicting drug responses, based on pharmacological and biological molecular structures, functions, and dynamics. This is attributed to their ability to handle high dimensionality in data features, making them appealing for use in predicting drug response [^5].
 
 For example, deep neural networks were used in models that won NIH’s Toxi21 Challenge [^2] on using chemical structure data only to predict compounds of concern to human health [^3]. DL models were also found to perform better than standard RF models [^1] in predicting the biological activities of molecular compounds in the Merck Molecular Activity Challenge on Kaggle [^11]. Details of the challenge follow.
 
@@ -50,9 +50,9 @@ A challenge to identify the best statistical techniques for predicting molecular
 
 A [dataset](https://www.kaggle.com/c/MerckActivity/data) was provided for the challenge [^11]. It consisted of 15 molecular activity datasets. Each dataset contained rows corresponding to assays of biological activity for chemical compounds. The datasets were subdivided into training and test set files. The training and test dataset split was done by dates of testing [^11], with test set dates consisting of assays conducted after the training set assays.
 
-The training set files each had a column with molecular descriptors that were formulated from chemical molecular structures. A second column in the files contained numeric values, corresponding to raw activity measures. These were not normalized and indicated measures in different units.
+The training set files each had a column with molecular descriptors that were formulated from chemical molecular structures. A second column in the files contained numeric values, corresponding to raw activity measures. These were not normalized, and indicated measures in different units.
 
-The remainder of the columns in each training dataset file indicated disguised substructures of molecules. Values in each row, under the substructure (atom pair and donor-acceptor pair) codes, corresponded to the frequencies at which each of the substructures appeared in each compound. Figure 1 shows part of the head row for one of the training datasets files, and the first records in the file.
+The remainder of the columns in each training dataset file indicated disguised substructures of molecules. Values in each row, under the substructure (atom pair and donor-acceptor pair) codes, corresponded to the frequencies at which each of the substructures appeared in each compound. Figure 1 shows part of the head row for one of the training dataset files, and the first records in the file.
 
 
 ![Figure 1](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/training_set.jpg) 
@@ -83,7 +83,7 @@ A full report of the work done was scheduled for completion by May 2nd , 2021.
 
 Implementation details for the project were as follows:
 
-### 4.1 Tools and Environment
+### 4.1. Tools and Environment
 
 The Python programming language (version 3.7.10) was used on Google Colab (https://colab.research.google.com).
 
@@ -95,13 +95,13 @@ Prerequisites for the code included packages from [Cloudmesh](http://cloudmesh.g
 
 Keras libraries were used for implementing the molecular activity prediction model.
 
-### 4.2 Implementation Overview
+### 4.2. Implementation Overview
 
-The implementation consisted of a fully connected neural network. The network was trained on the 15 datasets separately, but iteratively, with evaluations and predictions of molecular activity executed for each dataset. This was necessitated by the fact that the 15 datasets had different feature set columns, corresponding to different molecular substructures. As such, they could not be readily processed in a single dataframe.
+This project's implementation of a molecular activity prediction model consisted of a fully connected neural network. The network was trained on the 15 datasets separately, but iteratively, with evaluations and predictions of molecular activity executed for each dataset. This was necessitated by the fact that the 15 datasets had different feature set columns, corresponding to different molecular substructures. As such, they could not be readily processed through a single dataframe.
 
-An additional confounding factor with the data was that it was missing the molecular activity results (actual readings) associated with the dataset provided for testing. These were not available through Kaggle as the original competition withheld these from contestants, reserving them as a means for evaluating the accuracy of the models submitted. In the absence of this data, for validating the results of this project, the available training data was split into samples that were when used for the exercise. The training of the fully connected network was allocated 80% of the data, while the testing/evaluation of the model was allocated 10% of the data. The remaining data (10%) was used for evaluating predictions.
+An additional compounding factor was that the data was missing the molecular activity results (actual readings) associated with the dataset provided for testing. These were not available through Kaggle as the original competition withheld these from contestants, reserving them as a means for evaluating the accuracy of the models submitted. In the absence of this data, for validating the results of this project, the available training data was split into samples that were when used for the exercise. The training of the fully connected network was allocated 80% of the data, while the testing/evaluation of the model was allocated 10% of the data. The remaining data (10%) was used for evaluating predictions.
 
-### 4.3 Benchmarks
+### 4.3. Benchmarks
 
 Benchmarks captured during code execution, using cloudmesh-common [^2] were as follows:
 
@@ -111,17 +111,17 @@ Benchmarks captured during code execution, using cloudmesh-common [^2] were as f
 
 * The model training, evaluation and prediction step took 7 minutes and 45 seconds.
 
-### 4.4 Findings
+### 4.4. Findings
 
-The correlation coefficient (R^2) values obtained during training and evaluation were considerably low (< 0.1), as such predictions for molecular activity were also significantly off. No meaningful predictions were obtained from the model.
+The correlation coefficient (R^2) values obtained during training and evaluation were considerably low (< 0.1), as such predictions for molecular activity were also significantly off target from the actual activity measures. The predictions were thus unreliable.
 
 ## 5. Discussion
 
 An overwhelming proportion of the data elements provided through the datasets were zeros (0)s, indicating that no frequencies of the molecular substructures/features were present in the molecules represented by particular rows of data elements. This disproportionate representation of absent molecular substructure frequencies, versus the significantly lower instances where there were frequencies appears to have had an effect of dampening the learning of the fully connected neural network.
 
-This supports approaches that advocated for the use of convolutional neural networks [^12], [^15] as auxiliary components to help focus learning on pertinent substructures. While the planning phase of this project had incorporated inclusion of such, the investigator ran out of time to implement an ensemble network that would include the suggestion.
+This supports approaches that advocated for the use of convolutional neural networks [^12], [^15] as auxiliary components to help focus learning on pertinent substructures. While the planning phase of this project had incorporated inclusion of such, the investigator ran out of time to implement an ensemble network that would include the suggestions.
 
-Apart from employing convolutions, other preprocessing approaches for rescaling, and normalizing, the data features and activations [^17] may have helped the learning, and subsequently the predictions made.
+Apart from employing convolutions, other preprocessing approaches for rescaling, and normalizing, the data features and activations [^17] could have helped the learning, and subsequently the predictions made. This reinforces the fact that deep learning models, as is true with other machine learning approaches, rely deeply on the quality of data fed into them.
  
 ## 6. Conclusion
 
@@ -129,9 +129,9 @@ Deep learning is a very powerful new approach to solving many machine learning p
 
 ## 7. Acknowledgments
 
-I wish to acknowledge Geoffrey Fox for excellent guidance on ways to think about deep learning approaches, and for his instructorship of the course 'ENG-E599: AI-First Engineering', for which this project is a deliverable. I also wish to acknowledge Gregor von Laszewski for astute tips and recommendations on technical matters, and coding and documention etiquette.
+I wish to acknowledge Geoffrey Fox for excellent guidance on ways to think about deep learning approaches, and for his instructorship of the course 'ENG-E599: AI-First Engineering', for which this project is a deliverable. I also wish to acknowledge Gregor von Laszewski for his astute tips and recommendations on technical matters, and coding and documention etiquette.
 
-## Appendix
+## 8. Appendix
 
 Test for hugo: $R^2 = \frac{1}{15}\sum{a}{b}$
 
