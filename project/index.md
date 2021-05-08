@@ -85,7 +85,7 @@ The Python programming language (version 3.7.10) was used on Google Colab (https
 
 A subscription account to the service was employed, for access to more RAM (High-RAM runtime shape) during development, although the free standard subscription will suffice for the version of code included in this repository.
 
-GPU hardware accelerators were used for the runtime configuration.
+Google Colab GPU hardware accelerators were used in the runtime configuration.
 
 Prerequisites for the code included packages from [Cloudmesh](http://cloudmesh.github.io/ ), for benchmarking performance, and from [Kaggle](https://www.kaggle.com/ ), for API access to related data.
 
@@ -93,7 +93,9 @@ Keras libraries were used for implementing the molecular activity prediction mod
 
 ### 4.2. Implementation Overview
 
-This project's implementation of a molecular activity prediction model consisted of a fully connected neural network. The network was trained on the 15 datasets separately, but iteratively, with evaluations and predictions of molecular activity executed for each dataset. This was necessitated by the fact that the 15 datasets had different feature set columns, corresponding to different molecular substructures. As such, they could not be readily processed through a single dataframe.
+This project's implementation of a molecular activity prediction model consisted of a fully connected neural network.  The network used the Adam [^18] optimization algorithm, at a learning rate of 0.001 and beta_1 calibration of 0.5. Mean Squared Error (MSE) was used for the loss function, and R-Squared [^19] for the metric. Batch sizes were set at 128. These parameter choices were selected by referencing the choices of other prior investigators [^17].
+
+The network was trained on the 15 datasets separately, by iterating through the storage location containing preprocessed data, and sampling the data into training, evaluation and prediction datasets - before running the training. The evaluation and prediction steps, for each dataset, where also executed during the iteration of each molecular activity dataset. Running the processing in this way was necessitated by the fact that the 15 datasets each had different feature set columns, corresponding to different molecular substructures. As such, they could not be readily processed through a single dataframe.
 
 An additional compounding factor was that the data was missing the molecular activity results (actual readings) associated with the dataset provided for testing. These were not available through Kaggle as the original competition withheld these from contestants, reserving them as a means for evaluating the accuracy of the models submitted. In the absence of this data, for validating the results of this project, the available training data was split into samples that were when used for the exercise. The training of the fully connected network was allocated 80% of the data, while the testing/evaluation of the model was allocated 10% of the data. The remaining data (10%) was used for evaluating predictions.
 
@@ -109,7 +111,7 @@ Benchmarks captured during code execution, using cloudmesh-common [^2] were as f
 
 ### 4.4. Findings
 
-The correlation coefficient (R^2) values obtained during training and evaluation were considerably low (< 0.1), as such predictions for molecular activity were also significantly off target from the actual activity measures. The predictions were thus unreliable.
+The square of the correlation coefficient (R^2) values obtained (coefficient of determination) [^20] during training and evaluation were considerably low (< 0.1). A value of one (1) would indicate a goodness of fit for the model that implies that the model is completely on target with predicting accurate outcomes (molecular activity) from the independent variables (substructures/feature sets). The model thus fully accounts for the predictions, given a set of substructures as inputs. A value of zero (0) indicates a total lack of correlation between the input feature values and the predicted outputs. As such, it would imply that there is a lot of unexplained variance in the outputs of the model. The square of the correlation coefficient values obtained for this model (<0.1) therefore imply that it either did not learn enough, or other unexplained (by the model) variance caused unreliable predictions. 
 
 
 ## 5. Discussion
@@ -135,7 +137,7 @@ Acknowledgements go to Dr. Geoffrey Fox for his excellent guidance on ways to th
 
 Test for hugo: $R^2 = \frac{1}{15}\sum{a}{b}$
 
-Correlation Coefficient (R2) Formula:
+Square of the Correlation Coefficient (R2) Formula:
 
 ![Figure 3](https://github.com/cybertraining-dsc/sp21-599-359/raw/develop/project/images/correlation_coefficient.jpg)
 [^11]
@@ -214,3 +216,12 @@ Rsquared <- function(x,y) {
 
 
 [^17]: RuwanT (2017, May 16). Merk. Retrieved from [https://github.com:] <https://github.com/RuwanT/merck/blob/master/README.md>
+
+
+[^18]: Keras. (2021). Adam. Retrieved from [https://keras.io:] <https://keras.io/api/optimizers/adam/>
+
+
+[^19]: Keras. (2021). Regression Metrics. Retrieved from [https://keras.io:] <https://keras.io/api/metrics/regression_metrics/>
+
+
+[^20]: Wikipedia (2021). Coefficient of Determination. Retrieved from [https://wikipedia.org:] <https://en.wikipedia.org/wiki/Coefficient_of_determination>
