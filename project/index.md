@@ -77,11 +77,11 @@ An approach of employing convolutional networks on substructures of molecules, t
 In line with the above research, an ensemble of networks for predicting molecular activity was planned for this project, using the Merck dataset, and hyperparameter configurations found optimal by the cited authors. Recognized optimal activation functions, for different neural network types and prediction types [^4], were also earmarked for use on the project.
 
 
-## 4. Project Implementation
+## 3. Project Implementation
 
 Implementation details for the project were as follows:
 
-### 4.1. Tools and Environment
+### 3.1. Tools and Environment
 
 The Python programming language (version 3.7.10) was used on Google Colab (https://colab.research.google.com).
 
@@ -93,7 +93,7 @@ Prerequisites for the code included packages from [Cloudmesh](http://cloudmesh.g
 
 Keras libraries were used for implementing the molecular activity prediction model.
 
-### 4.2. Implementation Overview
+### 3.2. Implementation Overview
 
 This project's implementation of a molecular activity prediction model consisted of a fully connected neural network.  The network used the Adam [^18] optimization algorithm, at a learning rate of 0.001 and beta_1 calibration of 0.5. Mean Squared Error (MSE) was used for the loss function, and R-Squared [^19] for the metric. Batch sizes were set at 128. These parameter choices were selected by referencing the choices of other prior investigators [^17].
 
@@ -101,7 +101,7 @@ The network was trained on the 15 datasets separately, by iterating through the 
 
 An additional compounding factor was that the data was missing the molecular activity results (actual readings) associated with the dataset provided for testing. These were not available through Kaggle as the original competition withheld these from contestants, reserving them as a means for evaluating the accuracy of the models submitted. In the absence of this data, for validating the results of this project, the available training data was split into samples that were then used for the exercise. The training of the fully connected network was allocated 80% of the data, while the testing/evaluation of the model was allocated 10% of the data. The remaining data (10%) was used for evaluating predictions.
 
-### 4.3. Benchmarks
+### 3.3. Benchmarks
 
 Benchmarks captured during code execution, using cloudmesh-common [^2], were as follows:
 
@@ -111,12 +111,12 @@ Benchmarks captured during code execution, using cloudmesh-common [^2], were as 
 
 * The model training, evaluation and prediction step took 7 minutes and 45 seconds.
 
-### 4.4. Findings
+### 3.4. Findings
 
 The square of the correlation coefficient (R^2) values obtained (coefficient of determination) [^20] during training and evaluation were considerably low (< 0.1). A value of one (1) would indicate a goodness of fit for the model that implies that the model is completely on target with predicting accurate outcomes (molecular activity) from the independent variables (substructures/feature sets). Such a model would thus fully account for the predictions, given a set of substructures as inputs. A value of zero (0) would indicate a total lack of correlation between the input feature values and the predicted outputs. As such, it would imply that there is a lot of unexplained variance in the outputs of the model. The square of the correlation coefficient values obtained for this model (<0.1) therefore imply that it either did not learn enough, or other unexplained (by the model) variance caused unreliable predictions. 
 
 
-## 5. Discussion
+## 4. Discussion
 
 An overwhelming proportion of the data elements provided through the datasets were zeros (0)s, indicating that no frequencies of the molecular substructures/features were present in the molecules represented by particular rows of data elements. This disproportionate representation of absent molecular substructure frequencies, versus the significantly lower instances where there were frequencies appears to have had an effect of dampening the learning of the fully connected neural network.
 
@@ -125,17 +125,17 @@ This supports approaches that advocated for the use of convolutional neural netw
 Apart from employing convolutions, other preprocessing approaches for rescaling, and normalizing, the data features and activations [^17] could have helped the learning, and subsequently the predictions made. This reinforces the fact that deep learning models, as is true with other machine learning approaches, rely deeply on the quality of data fed into them.
 
 
-## 6. Conclusion
+## 5. Conclusion
 
 Deep learning is a very powerful new approach to solving many machine learning problems, including some that have eluded solutions till now. While deep learning models offer robust and sophisticated ways of learning patterns in data, they are still only half the story. The quality and appropriate preparation of the data fed into models is equally important when seeking to have meaningful results.
 
 
-## 7. Acknowledgments
+## 6. Acknowledgments
 
 Acknowledgements go to Dr. Geoffrey Fox for his excellent guidance on ways to think about deep learning approaches, and for his instructorship of the course 'ENG-E599: AI-First Engineering', for which this project is a deliverable. Acknowledgements also go to Dr. Gregor von Laszewski for his astute tips and recommendations on technical matters, and on coding and documention etiquette.
 
 
-## 8. Appendix
+## 7. Appendix
 
 Square of the Correlation Coefficient (R2) Formula:
 
