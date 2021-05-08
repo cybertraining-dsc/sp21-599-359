@@ -129,7 +129,7 @@ Deep learning is a very powerful new approach to solving many machine learning p
 
 ## 7. Acknowledgments
 
-I wish to acknowledge Geoffrey Fox for excellent guidance on ways to think about deep learning approaches, and for his instructorship of the course 'ENG-E599: AI-First Engineering', for which this project is a deliverable. I also wish to acknowledge Gregor von Laszewski for his astute tips and recommendations on technical matters, and coding and documention etiquette.
+Acknowledgements go to Dr. Geoffrey Fox for his excellent guidance on ways to think about deep learning approaches, and for his instructorship of the course 'ENG-E599: AI-First Engineering', for which this project is a deliverable. Acknowledgements also go to Dr. Gregor von Laszewski for his astute tips and recommendations on technical matters, and on coding and documention etiquette.
 
 ## 8. Appendix
 
