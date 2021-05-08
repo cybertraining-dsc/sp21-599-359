@@ -101,7 +101,7 @@ An additional compounding factor was that the data was missing the molecular act
 
 ### 4.3. Benchmarks
 
-Benchmarks captured during code execution, using cloudmesh-common [^2] were as follows:
+Benchmarks captured during code execution, using cloudmesh-common [^2], were as follows:
 
 * The data download process from Kaggle, through the Kaggle data API, took 29 seconds.
 
@@ -111,7 +111,7 @@ Benchmarks captured during code execution, using cloudmesh-common [^2] were as f
 
 ### 4.4. Findings
 
-The square of the correlation coefficient (R^2) values obtained (coefficient of determination) [^20] during training and evaluation were considerably low (< 0.1). A value of one (1) would indicate a goodness of fit for the model that implies that the model is completely on target with predicting accurate outcomes (molecular activity) from the independent variables (substructures/feature sets). The model thus fully accounts for the predictions, given a set of substructures as inputs. A value of zero (0) indicates a total lack of correlation between the input feature values and the predicted outputs. As such, it would imply that there is a lot of unexplained variance in the outputs of the model. The square of the correlation coefficient values obtained for this model (<0.1) therefore imply that it either did not learn enough, or other unexplained (by the model) variance caused unreliable predictions. 
+The square of the correlation coefficient (R^2) values obtained (coefficient of determination) [^20] during training and evaluation were considerably low (< 0.1). A value of one (1) would indicate a goodness of fit for the model that implies that the model is completely on target with predicting accurate outcomes (molecular activity) from the independent variables (substructures/feature sets). Such a model would thus fully account for the predictions, given a set of substructures as inputs. A value of zero (0) would indicate a total lack of correlation between the input feature values and the predicted outputs. As such, it would imply that there is a lot of unexplained variance in the outputs of the model. The square of the correlation coefficient values obtained for this model (<0.1) therefore imply that it either did not learn enough, or other unexplained (by the model) variance caused unreliable predictions. 
 
 
 ## 5. Discussion
