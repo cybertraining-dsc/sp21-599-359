@@ -122,7 +122,7 @@ An overwhelming proportion of the data elements provided through the datasets we
 
 This supports approaches that advocated for the use of convolutional neural networks [^12], [^15] as auxiliary components to help focus learning on pertinent substructures. While the planning phase of this project had incorporated inclusion of such, the investigator ran out of time to implement an ensemble network that would include the suggestions.
 
-Apart from employing convolutions, other preprocessing approaches for rescaling, and normalizing, the data features and activations [^17] could have helped the learning, and subsequently the predictions made. This reinforces the fact that deep learning models, as is true with other machine learning approaches, rely deeply on the quality of data fed into them.
+Apart from employing convolutions, other preprocessing approaches for rescaling, and normalizing, the data features and activations [^17] could have helped the learning, and subsequently the predictions made. This reinforces the fact that deep learning models, as is true of other machine learning approaches, rely deeply on the quality of data fed into them.
 
 
 ## 5. Conclusion
