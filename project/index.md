@@ -4,7 +4,7 @@ title: "Project: Deep Learning in Drug Discovery"
 linkTitle: Drug Discovery
 tags: ["project", "ai", "health"]
 description: This paper outlines work conducted in predicting drug molecular activity, using deep learning approaches.
-author: , [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-
+author: Anesu Chaora
 resources:
 - src: "**.{png,jpg}"
   title: "Image #:counter"
