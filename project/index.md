@@ -1,4 +1,15 @@
-# Project: Deep Learning in Drug Discovery
+---
+date: 2021-03-15
+title: Project: Deep Learning in Drug Discovery
+linkTitle: Drug Discovery
+tags: ["project", "ai", "health"]
+description: This paper outlines work conducted in predicting drug molecular activity, using deep learning approaches.
+author: , [sp21-599-359](https://github.com/cybertraining-dsc/sp21-599-359/), [Edit](https://github.com/cybertraining-dsc/sp21-599-
+resources:
+- src: "**.{png,jpg}"
+  title: "Image #:counter"
+---
+
 
 [![Check  Report](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Check%20Report/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
 [![Status](https://github.com/cybertraining-dsc/sp21-599-359/workflows/Status/badge.svg)](https://github.com/cybertraining-dsc/sp21-599-359/actions)
