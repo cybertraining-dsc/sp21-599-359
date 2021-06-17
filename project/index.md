@@ -5,6 +5,7 @@ linkTitle: Drug Discovery
 tags: ["project", "ai", "health"]
 description: "Machine learning has been a mainstay in drug discovery for decades. Artificial neural networks have been used in computational approaches to drug discovery since the 1990s. Under traditional approaches, emphasis in drug discovery was placed on understanding chemical molecular fingerprints, in order to predict biological activity. More recently however, deep learning approaches have been adopted instead of computational methods. This paper outlines work conducted in predicting drug molecular activity, using deep learning approaches."
 author: Anesu Chaora
+github_url: https://github.com/cybertraining-dsc/sp21-599-359/edit/main/project/index.md
 resources:
 - src: "**.{png,jpg}"
   title: "Image #:counter"
